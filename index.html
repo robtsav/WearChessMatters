@@ -225,8 +225,8 @@
       opacity: 0.55;
     }
 
-    /* Proper 8×8 checkerboard — light square in bottom-right corner */
-    .hero-board-art div { background: #1A56DB; }
+    /* Proper 8×8 checkerboard — dark top-left, alternating correctly */
+    .hero-board-art div { background: #6D96EE; }
     .hero-board-art div:nth-child(16n+1),
     .hero-board-art div:nth-child(16n+3),
     .hero-board-art div:nth-child(16n+5),
@@ -234,7 +234,7 @@
     .hero-board-art div:nth-child(16n+10),
     .hero-board-art div:nth-child(16n+12),
     .hero-board-art div:nth-child(16n+14),
-    .hero-board-art div:nth-child(16n) { background: #6D96EE; }
+    .hero-board-art div:nth-child(16n) { background: #1A56DB; }
 
     .hero-piece-large {
       font-size: 14rem;
@@ -667,13 +667,13 @@
       <a href="https://wittshirt.com" class="btn-read" target="_blank" rel="noopener">Shop the Collection</a>
     </div>
     <div class="hero-visual">
-      <div class="hero-board-art" aria-hidden="true">
-        <script>
-          document.currentScript.insertAdjacentHTML('afterend',
-            Array.from({length:64},(_,i)=>`<div></div>`).join('')
-          );
-        </script>
-      </div>
+      <div class="hero-board-art" id="hero-board-art" aria-hidden="true"></div>
+      <script>
+        (function(){
+          var b = document.getElementById('hero-board-art');
+          b.innerHTML = Array.from({length:64}).map(function(){ return '<div></div>'; }).join('');
+        })();
+      </script>
       <img src="Chess Matters - Logo.png" alt="Chess Matters Logo" class="hero-logo-img" />
       <span class="hero-caption">Wit-T-Shirt · Original Chess Apparel · Est. 2012</span>
     </div>

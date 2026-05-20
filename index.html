@@ -16,16 +16,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --ink: #0f0f0f;
-      --paper: #f4f0e8;
-      --cream: #ede8dc;
-      --gold: #b8860b;
-      --gold-bright: #d4a017;
-      --rule: #0f0f0f;
-      --muted: #666;
+      --ink:          #0A1628;
+      --paper:        #F5FAFC;
+      --cream:        #E8F8F9;
+      --teal:         #00A8B5;
+      --teal-bright:  #00C4D4;
+      --coral:        #FF6347;
+      --coral-bright: #FF7A5C;
+      --sapphire:     #1A56DB;
+      --sapphire-lt:  #EEF5FF;
+      --gold:         #00A8B5;
+      --gold-bright:  #00C4D4;
+      --muted:        #5A7080;
       --font-display: 'Bebas Neue', sans-serif;
-      --font-body: 'Libre Baskerville', Georgia, serif;
-      --font-mono: 'IBM Plex Mono', monospace;
+      --font-body:    'Libre Baskerville', Georgia, serif;
+      --font-mono:    'IBM Plex Mono', monospace;
     }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -44,7 +49,7 @@
 
     /* ── MASTHEAD ── */
     .masthead {
-      border-bottom: 3px solid var(--ink);
+      border-bottom: 3px solid var(--sapphire);
       padding: 0.5rem 2rem;
       display: flex;
       align-items: center;
@@ -101,7 +106,7 @@
       z-index: 2;
       opacity: 0.88;
       animation: float 6s ease-in-out infinite;
-      filter: drop-shadow(0 0 40px rgba(184,134,11,0.3));
+      filter: drop-shadow(0 0 40px rgba(0,168,181,0.35));
     }
 
     .masthead-right {
@@ -113,13 +118,13 @@
     }
 
     .masthead-right a {
-      background: var(--ink);
+      background: var(--sapphire);
       color: var(--paper);
       padding: 0.4rem 0.9rem;
       transition: background 0.2s;
     }
 
-    .masthead-right a:hover { background: var(--gold); }
+    .masthead-right a:hover { background: var(--teal); }
 
     /* ── HERO FEATURE ── */
     .hero-feature {
@@ -159,7 +164,7 @@
     }
 
     .hero-headline em {
-      color: var(--gold);
+      color: var(--coral);
       font-style: normal;
     }
 
@@ -196,10 +201,10 @@
       align-self: flex-start;
     }
 
-    .btn-read:hover { background: var(--gold); transform: translateY(-2px); }
+    .btn-read:hover { background: var(--sapphire); transform: translateY(-2px); }
 
     .hero-visual {
-      background: var(--ink);
+      background: var(--sapphire);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -248,9 +253,9 @@
       align-items: center;
       gap: 1rem;
       padding: 0.75rem 2rem;
-      border-bottom: 1px solid var(--ink);
-      border-top: 1px solid var(--ink);
-      background: var(--ink);
+      border-bottom: 1px solid var(--sapphire);
+      border-top: 1px solid var(--sapphire);
+      background: var(--sapphire);
       color: var(--paper);
     }
 
@@ -275,12 +280,12 @@
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-bottom: 2px solid var(--ink);
+      border-bottom: 2px solid #C8DFF0;
     }
 
     .article-card {
       padding: 2rem;
-      border-right: 1px solid var(--ink);
+      border-right: 1px solid #C8DFF0;
       transition: background 0.2s;
       cursor: pointer;
     }
@@ -349,7 +354,7 @@
     }
 
     .feature-main .big-quote em {
-      color: var(--gold);
+      color: var(--coral);
       font-style: normal;
       display: block;
     }
@@ -363,7 +368,7 @@
 
     .feature-side {
       padding: 2rem;
-      background: var(--ink);
+      background: var(--sapphire);
       color: var(--paper);
       display: flex;
       flex-direction: column;
@@ -399,8 +404,8 @@
       font-size: 0.7rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
-      background: var(--gold);
-      color: var(--ink);
+      background: var(--coral);
+      color: #fff;
       padding: 0.75rem 1.5rem;
       display: inline-block;
       font-weight: 500;
@@ -408,15 +413,15 @@
       align-self: flex-start;
     }
 
-    .btn-shop:hover { background: var(--gold-bright); }
+    .btn-shop:hover { background: var(--coral-bright); }
 
     /* ── MARQUEE ── */
     .marquee {
       overflow: hidden;
-      border-top: 2px solid var(--ink);
-      border-bottom: 2px solid var(--ink);
+      border-top: 2px solid var(--teal);
+      border-bottom: 2px solid var(--teal);
       padding: 0.6rem 0;
-      background: var(--ink);
+      background: var(--teal);
     }
 
     .marquee-inner {
@@ -427,7 +432,7 @@
       font-family: var(--font-display);
       font-size: 1.1rem;
       letter-spacing: 0.1em;
-      color: var(--gold);
+      color: #fff;
     }
 
     .marquee-inner span { flex-shrink: 0; }
@@ -524,7 +529,7 @@
       font-family: var(--font-display);
       font-size: 2.5rem;
       letter-spacing: 0.05em;
-      color: var(--gold);
+      color: var(--teal);
       line-height: 1;
       margin-bottom: 0.5rem;
     }
@@ -565,6 +570,37 @@
       text-transform: uppercase;
       display: flex;
       justify-content: space-between;
+    }
+
+    /* ── WEATHERED OAK DIVIDER ── */
+    .oak-divider {
+      height: 28px;
+      background:
+        repeating-linear-gradient(
+          180deg,
+          #6E5E50 0px,  #6E5E50 1px,   /* plank top edge */
+          #8B7B6A 1px,  #8B7B6A 3px,
+          #A09585 3px,  #A09585 4px,   /* silver grain streak */
+          #857565 4px,  #857565 7px,
+          #978880 7px,  #978880 8px,   /* bleached highlight */
+          #7A6A5A 8px,  #7A6A5A 10px,
+          #C0B5AA 10px, #C0B5AA 11px,  /* sun-bleached silver */
+          #7A6A5A 11px, #7A6A5A 12px,
+          #8B7B6A 12px, #8B7B6A 14px,
+          #3A2E26 14px, #3A2E26 15px,  /* gap shadow between planks */
+          #F0E8DF 15px, #F0E8DF 16px,  /* gap light bounce */
+          #6A5A4A 16px, #6A5A4A 17px,
+          #7E6E60 17px, #7E6E60 19px,
+          #B0A598 19px, #B0A598 20px,  /* silver grain streak */
+          #7A6A5A 20px, #7A6A5A 22px,
+          #907E70 22px, #907E70 23px,
+          #C5BAB0 23px, #C5BAB0 24px,  /* sun-bleached streak */
+          #7E6E60 24px, #7E6E60 26px,
+          #8B7B6A 26px, #8B7B6A 27px,
+          #3A2E26 27px, #3A2E26 28px   /* bottom edge shadow */
+        );
+      border-top: 1px solid #3A2E26;
+      border-bottom: 1px solid #3A2E26;
     }
 
     /* ── ANIMATIONS ── */
@@ -632,6 +668,8 @@
     </div>
   </section>
 
+  <div class="oak-divider" aria-hidden="true"></div>
+
   <!-- SECTION RULE -->
   <div class="section-rule">
     <h2>Latest Posts</h2>
@@ -661,6 +699,8 @@
     </article>
   </section>
 
+  <div class="oak-divider" aria-hidden="true"></div>
+
   <!-- MARQUEE -->
   <div class="marquee" aria-hidden="true">
     <div class="marquee-inner">
@@ -676,6 +716,8 @@
       <span>FLORIDA CHESS ♝</span>
     </div>
   </div>
+
+  <div class="oak-divider" aria-hidden="true"></div>
 
   <!-- FEATURE STRIP -->
   <section class="feature-strip">
@@ -708,6 +750,8 @@
     </div>
   </section>
 
+  <div class="oak-divider" aria-hidden="true"></div>
+
   <!-- STATS BAND -->
   <section class="about-band">
     <div class="about-stat">
@@ -737,6 +781,8 @@
       <a href="https://www.zazzle.com/store/btcbdesign" class="dist-channel" target="_blank" rel="noopener">Zazzle.com</a>
     </div>
   </div>
+
+  <div class="oak-divider" aria-hidden="true"></div>
 
   <!-- FOOTER -->
   <footer class="site-footer">

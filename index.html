@@ -222,11 +222,19 @@
       height: 100%;
       position: absolute;
       inset: 0;
-      opacity: 0.12;
+      opacity: 0.55;
     }
 
+    /* Proper 8×8 checkerboard — light square in bottom-right corner */
     .hero-board-art div { background: #1A56DB; }
-    .hero-board-art div:nth-child(even) { background: #3D74E8; }
+    .hero-board-art div:nth-child(16n+1),
+    .hero-board-art div:nth-child(16n+3),
+    .hero-board-art div:nth-child(16n+5),
+    .hero-board-art div:nth-child(16n+7),
+    .hero-board-art div:nth-child(16n+10),
+    .hero-board-art div:nth-child(16n+12),
+    .hero-board-art div:nth-child(16n+14),
+    .hero-board-art div:nth-child(16n) { background: #6D96EE; }
 
     .hero-piece-large {
       font-size: 14rem;

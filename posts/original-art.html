@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human-Made. No AI. Every Single Design. — Wit-T-Shirt</title>
+    <meta name="description" content="Design pulled from the board, the pieces, the players, and the wit of the game. How Wit-T-Shirt draws inspiration from chess to create original apparel that thinks." />
+    <link rel="canonical" href="https://robtsav.github.io/WearChessMatters/posts/original-art.html" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fredoka:wght@600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <style>
+        :root {
+            --ink:          #0A1628;
+            --paper:        #F5FAFC;
+            --cream:        #E8F8F9;
+            --teal:         #00A8B5;
+            --teal-bright:  #00C4D4;
+            --coral:        #FF6347;
+            --cotton:       #F2EDE5;
+            --cotton-dark:  #E4DDD4;
+            --sapphire:     #1A56DB;
+            --sapphire-lt:  #EEF5FF;
+            --gold:         #00A8B5;
+            --muted:        #5A7080;
+            --font-display: 'Bebas Neue', sans-serif;
+            --font-body:    'Libre Baskerville', Georgia, serif;
+            --font-mono:    'IBM Plex Mono', monospace;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--font-body);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        a { color: inherit; text-decoration: none; }
+        img { max-width: 100%; display: block; }
+
+        /* ── MASTHEAD ── */
+        .masthead {
+            border-bottom: 3px solid var(--sapphire);
+            padding: 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--paper);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .masthead-left {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .masthead-logo {
+            font-family: 'Fredoka', sans-serif;
+            text-align: center;
+            line-height: 1.15;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo-line-1 { font-size: 1.15rem; font-weight: 700; color: var(--ink); letter-spacing: 0.02em; }
+        .logo-line-2 { font-size: 0.8rem; font-weight: 600; color: var(--gold); letter-spacing: 0.08em; text-transform: uppercase; }
+        .logo-line-3 { font-size: 1.1rem; font-weight: 700; color: var(--ink); letter-spacing: 0.02em; }
+
+        .masthead-right {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            text-align: right;
+        }
+
+        .masthead-right a { color: var(--sapphire); }
+
+        /* ── OAK DIVIDER ── */
+        .oak-divider {
+            height: 28px;
+            background: repeating-linear-gradient(
+                180deg,
+                #6E5E50 0px, #6E5E50 1px, #8B7B6A 1px, #8B7B6A 3px, #A09585 3px, #A09585 4px,
+                #857565 4px, #857565 7px, #978880 7px, #978880 8px, #7A6A5A 8px, #7A6A5A 10px,
+                #C0B5AA 10px, #C0B5AA 11px, #7A6A5A 11px, #7A6A5A 12px, #8B7B6A 12px, #8B7B6A 14px,
+                #3A2E26 14px, #3A2E26 15px, #F0E8DF 15px, #F0E8DF 16px, #6A5A4A 16px, #6A5A4A 17px,
+                #7E6E60 17px, #7E6E60 19px, #B0A598 19px, #B0A598 20px, #7A6A5A 20px, #7A6A5A 22px,
+                #907E70 22px, #907E70 23px, #C5BAB0 23px, #C5BAB0 24px, #7E6E60 24px, #7E6E60 26px,
+                #8B7B6A 26px, #8B7B6A 27px, #3A2E26 27px, #3A2E26 28px
+            );
+            border-top: 1px solid #3A2E26;
+            border-bottom: 1px solid #3A2E26;
+        }
+
+        /* ── POST HEADER ── */
+        .post-header {
+            background: var(--sapphire);
+            color: #fff;
+            padding: 4rem 2rem 3rem;
+            text-align: center;
+        }
+
+        .post-tag {
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 1.25rem;
+        }
+
+        .post-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.1;
+            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+            max-width: 820px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .post-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.05rem;
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ── ARTICLE BODY ── */
+        .post-body {
+            max-width: 740px;
+            margin: 0 auto;
+            padding: 3.5rem 2rem 4rem;
+        }
+
+        .post-body p {
+            margin-bottom: 1.6rem;
+            color: var(--ink);
+        }
+
+        .post-body p:last-child { margin-bottom: 0; }
+        .post-body em { font-style: italic; }
+        .post-body strong { font-weight: 700; }
+
+        /* Pull quote */
+        .pull-quote {
+            border-left: 4px solid var(--teal);
+            padding: 1rem 1.5rem;
+            margin: 2.5rem 0;
+            background: var(--cream);
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--ink);
+            line-height: 1.6;
+        }
+
+        /* Piece showcase */
+        .piece-row {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+            flex-wrap: wrap;
+        }
+
+        .piece-card {
+            text-align: center;
+            padding: 1.25rem 1rem;
+            background: var(--sapphire-lt);
+            border-top: 3px solid var(--sapphire);
+            min-width: 110px;
+            flex: 1;
+        }
+
+        .piece-glyph {
+            font-size: 2.2rem;
+            line-height: 1;
+            margin-bottom: 0.4rem;
+            color: var(--sapphire);
+        }
+
+        .piece-name {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .piece-trait {
+            font-family: var(--font-body);
+            font-size: 0.78rem;
+            font-style: italic;
+            color: var(--ink);
+            margin-top: 0.3rem;
+        }
+
+        /* Chess piece accent */
+        .piece-accent {
+            display: block;
+            font-size: 2rem;
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--teal);
+            letter-spacing: 0.5rem;
+        }
+
+        /* Section break */
+        .post-rule {
+            border: none;
+            border-top: 1px solid var(--cotton-dark);
+            margin: 2.5rem 0;
+        }
+
+        /* Closing signature */
+        .post-signature {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid var(--sapphire);
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            text-align: center;
+            line-height: 2;
+        }
+
+        /* ── BACK LINK BAR ── */
+        .back-bar {
+            background: var(--cotton);
+            padding: 0.9rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .back-bar a { color: var(--sapphire); font-weight: 500; }
+        .back-bar a:hover { text-decoration: underline; }
+
+        /* ── FOOTER ── */
+        .site-footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.85);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            padding: 3rem 2rem;
+        }
+
+        .footer-brand .brand-name {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            letter-spacing: 0.1em;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-brand .tagline {
+            font-size: 0.85rem;
+            line-height: 1.9;
+            color: rgba(255,255,255,0.6);
+            font-style: italic;
+        }
+
+        .site-footer nav h4,
+        .footer-connect h4 {
+            font-family: var(--font-mono);
+            font-size: 0.6rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--teal);
+            margin-bottom: 0.75rem;
+        }
+
+        .site-footer nav a,
+        .footer-connect a {
+            display: block;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .site-footer nav a:hover,
+        .footer-connect a:hover { color: #fff; }
+
+        .footer-bottom {
+            background: #000;
+            color: rgba(255,255,255,0.35);
+            font-family: var(--font-mono);
+            font-size: 0.58rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .site-footer { grid-template-columns: 1fr; }
+            .footer-bottom { flex-direction: column; gap: 0.3rem; }
+            .post-body { padding: 2rem 1.25rem 3rem; }
+            .post-header { padding: 2.5rem 1.25rem 2rem; }
+            .back-bar { flex-wrap: wrap; }
+            .piece-row { gap: 0.75rem; }
+            .piece-card { min-width: 80px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+        <div class="masthead-left">Est. 2012 · Florida Chess Apparel</div>
+        <a href="../index.html" class="masthead-logo">
+            <div class="logo-line-1">Wit-T-Shirt</div>
+            <div class="logo-line-2">Wear</div>
+            <div class="logo-line-3">Chess Matters</div>
+        </a>
+        <div class="masthead-right">
+            <a href="https://wittshirt.com" target="_blank" rel="noopener">Shop Now →</a>
+        </div>
+    </header>
+
+    <!-- BACK NAV -->
+    <div class="back-bar">
+        <a href="../index.html">← Back to Blog</a>
+        <span>·</span>
+        <span>🎨 Design · Original Art · Human-Made</span>
+    </div>
+
+    <div class="oak-divider" aria-hidden="true"></div>
+
+    <!-- POST HEADER -->
+    <div class="post-header">
+        <p class="post-tag">🎨 Design · Original Art · No AI</p>
+        <h1 class="post-title">Human-Made. No AI. Every Single Design.</h1>
+        <p class="post-subtitle">Design pulled from the board, the pieces, the players, and the wit of the game itself.</p>
+    </div>
+
+    <div class="oak-divider" aria-hidden="true"></div>
+
+    <!-- ARTICLE BODY -->
+    <article class="post-body">
+
+        <p>A chess player never makes a move without thinking first.</p>
+
+        <p>Not the good ones, anyway. They read the board. They feel the tension between pieces. They see the flow of the game — not just where the pieces are, but where they want to go, where they are being held back, and where the right move opens everything up.</p>
+
+        <p>That is exactly how we design.</p>
+
+        <div class="pull-quote">
+            Every shirt we have ever made started with a question: what does this piece, this position, this moment in chess actually feel like? And how do we put that on fabric in a way that makes you feel it too?
+        </div>
+
+        <p>That is not a prompt. That is not a dataset. That is a human being sitting with the game — thinking, sketching, crossing it out, starting over — until something honest comes through.</p>
+
+        <hr class="post-rule" />
+
+        <p>Consider the pieces themselves.</p>
+
+        <p>Each one has a name, a movement, a personality, and a role. Spend enough time with chess and you stop thinking of them as game tokens. They become characters. They become archetypes. They become a language.</p>
+
+        <!-- PIECE SHOWCASE -->
+        <div class="piece-row">
+            <div class="piece-card">
+                <div class="piece-glyph">♟</div>
+                <div class="piece-name">The Pawn</div>
+                <div class="piece-trait">Humble. Determined. Full of potential.</div>
+            </div>
+            <div class="piece-card">
+                <div class="piece-glyph">♞</div>
+                <div class="piece-name">The Knight</div>
+                <div class="piece-trait">Unpredictable. Creative. Leaps over everything.</div>
+            </div>
+            <div class="piece-card">
+                <div class="piece-glyph">♝</div>
+                <div class="piece-name">The Bishop</div>
+                <div class="piece-trait">Diagonal. Committed. Sees angles others miss.</div>
+            </div>
+            <div class="piece-card">
+                <div class="piece-glyph">♜</div>
+                <div class="piece-name">The Rook</div>
+                <div class="piece-trait">Straight. Powerful. Unmoved by distraction.</div>
+            </div>
+            <div class="piece-card">
+                <div class="piece-glyph">♛</div>
+                <div class="piece-name">The Queen</div>
+                <div class="piece-trait">Free. Fierce. Moves in every direction.</div>
+            </div>
+            <div class="piece-card">
+                <div class="piece-glyph">♚</div>
+                <div class="piece-name">The King</div>
+                <div class="piece-trait">Essential. Deliberate. Every move matters.</div>
+            </div>
+        </div>
+
+        <p>The pawn walks forward — one careful step at a time — carrying the quiet belief that it might one day become something extraordinary. The knight does not move in straight lines. It leaps. It cuts corners. It appears where no one expected it. The bishop commits to its diagonal, seeing the whole board from an angle everyone else overlooks.</p>
+
+        <p>The rook charges straight ahead with a kind of unstoppable authority. The queen moves with absolute freedom — forward, backward, diagonal, wherever the moment demands. And the king? The king moves with intention. One step. Chosen. Because in chess, as in life, not every move needs to be grand. It just needs to be right.</p>
+
+        <div class="pull-quote">
+            All of that — the personality, the movement, the tension, the wit — lives inside our designs. Because that is where we pull from.
+        </div>
+
+        <hr class="post-rule" />
+
+        <span class="piece-accent">♟ ♞ ♛</span>
+
+        <p>We draw from the players too. The ones who stare at the board in silence for ten minutes and then move a pawn one square with complete certainty. The ones who play fast and loose, daring their opponent to keep up. The ones who study openings like poets study words — not to copy them, but to feel the rhythm beneath them.</p>
+
+        <p>Design works the same way. You study what already exists — not to imitate it, but to understand what it is doing and then find the space where something new belongs.</p>
+
+        <p>We also draw from life outside the board. A skyline. A handshake. A classroom wall. The way a tournament hall sounds fifteen minutes before the round starts. The look on a kid's face when they find their right move. Design does not live in a vacuum. It breathes in everything around it and breathes something back out.</p>
+
+        <hr class="post-rule" />
+
+        <p>Now. Artificial intelligence can design. That is simply true.</p>
+
+        <p>It has been trained on an enormous amount of art — centuries of human creativity compressed into weights and parameters. For some, that is a perfectly useful tool. For others, it is a source of inspiration, a starting point, a way to explore ideas faster than a pencil allows.</p>
+
+        <p>We respect that. We are not afraid of it.</p>
+
+        <div class="pull-quote">
+            But at Wit-T-Shirt, we draw from the game, from the players, and from our own sense of wit and humor. AI has never lost a match. It has never watched a rook trade go wrong and laughed about it afterward. It has never felt the specific satisfaction of a knight fork landing exactly right.
+        </div>
+
+        <p>That lived experience — that chess-player's instinct for the unexpected angle, the patient setup, the move nobody saw coming — is what sits behind every design we have made. It is not replicable by any model, because no model has ever cared about the game the way a player does.</p>
+
+        <hr class="post-rule" />
+
+        <p>A good chess player does not move willy-nilly.</p>
+
+        <p>They think. They feel the board. They weigh their options. And then they commit — with wit, with purpose, with the confidence of someone who understands that the right move is not always the obvious one.</p>
+
+        <p>Our shirts work the same way. When you put one on, you are not just wearing a design. You are wearing a choice. A point of view. A move you decided to make.</p>
+
+        <p><em>You determined your right move, and your passion to wear.</em></p>
+
+        <p>That is what makes it a Wit-T-Shirt.</p>
+
+        <div class="post-signature">
+            Wit-T-Shirt<br/>
+            Human-Made · Original Designs · Est. 2012<br/>
+            Wear Chess Matters
+        </div>
+
+    </article>
+
+    <div class="oak-divider" aria-hidden="true"></div>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="footer-brand">
+            <div class="brand-name">WIT-T-SHIRT</div>
+            <p class="tagline">
+                Wear Chess Matters.<br/>
+                Wear beyond your next move.<br/>
+                Wear your Right Move.<br/>
+                <em>Wear your Passion.</em>
+            </p>
+        </div>
+        <nav>
+            <h4>Posts</h4>
+            <a href="14-years.html">14 Years of Chess Apparel</a>
+            <a href="girls-chess-style.html">Style Guide for Women &amp; Girls</a>
+            <a href="original-art.html">Original Design Manifesto</a>
+            <a href="tournament-archive.html">Tournament Archive</a>
+            <a href="gift-guide.html">Chess Gift Guide</a>
+        </nav>
+        <div class="footer-connect">
+            <h4>Shop</h4>
+            <a href="https://wittshirt.com" target="_blank" rel="noopener">WitTshirt.com ↗</a>
+            <a href="https://chess4less.com" target="_blank" rel="noopener">Chess4Less.com ↗</a>
+            <a href="https://www.walmart.com/c/brand/wit-t-shirt" target="_blank" rel="noopener">Walmart.com ↗</a>
+            <a href="https://www.zazzle.com/store/btcbdesign" target="_blank" rel="noopener">Zazzle.com ↗</a>
+        </div>
+    </footer>
+    <div class="footer-bottom">
+        <span>© 2026 Wit-T-Shirt · All Original Designs · No AI Art</span>
+        <span>Wear Your Right Move. Wear Your Passion.</span>
+    </div>
+
+</body>
+</html>

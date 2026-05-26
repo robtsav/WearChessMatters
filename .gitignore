@@ -1,0 +1,5 @@
+# Local Netlify folder
+.netlify
+
+# Draft / backup files
+index - Copy.html

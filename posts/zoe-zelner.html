@@ -27,7 +27,9 @@
         }
 
         body {
-            background: #f5f0ee;
+            background: linear-gradient(145deg, #b8d8e8 0%, #cdd9e8 30%, #ddc8dc 65%, #e8b8cc 100%);
+            background-attachment: fixed;
+            min-height: 100vh;
             color: #1a2e44;
             font-family: 'Source Sans 3', sans-serif;
             font-size: 17px;
@@ -106,7 +108,7 @@
 
         /* ── POST HEADER ── */
         .post-header {
-            background: linear-gradient(145deg, #b8d8e8 0%, #cdd9e8 30%, #ddc8dc 65%, #e8b8cc 100%);
+            background: var(--navy);
             padding: 4rem 24px 3rem;
             text-align: center;
             position: relative;
@@ -116,7 +118,7 @@
         .post-header::before {
             content: '♛';
             position: absolute; right: -10px; top: -20px;
-            font-size: 20rem; color: rgba(192,57,43,0.08);
+            font-size: 20rem; color: rgba(201,168,76,0.07);
             line-height: 1; pointer-events: none; user-select: none;
         }
 
@@ -125,7 +127,7 @@
         .post-tag {
             font-family: 'Oswald', sans-serif;
             font-size: 0.68rem; letter-spacing: 0.22em;
-            text-transform: uppercase; color: var(--red);
+            text-transform: uppercase; color: var(--gold);
             margin-bottom: 16px; display: block;
         }
 
@@ -133,22 +135,22 @@
             font-family: 'Playfair Display', serif;
             font-size: clamp(2rem, 5vw, 3.2rem);
             font-weight: 900; line-height: 1.1;
-            color: #1a2e44; margin-bottom: 16px;
+            color: var(--cream); margin-bottom: 16px;
         }
 
-        .post-title em { color: var(--red); font-style: italic; }
+        .post-title em { color: var(--gold-lt); font-style: italic; }
 
         .post-subtitle {
             font-family: 'Source Sans 3', sans-serif;
             font-size: 1.05rem; font-style: italic;
-            color: #4a5a6d; max-width: 580px; margin: 0 auto;
+            color: var(--gray); max-width: 580px; margin: 0 auto;
             line-height: 1.6;
         }
 
         .post-meta {
             margin-top: 20px;
             font-family: 'Oswald', sans-serif; font-size: 0.7rem;
-            letter-spacing: 0.12em; text-transform: uppercase; color: #6b7a8d;
+            letter-spacing: 0.12em; text-transform: uppercase; color: var(--gray);
         }
 
         /* Profile photo */

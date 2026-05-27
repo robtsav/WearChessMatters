@@ -81,12 +81,12 @@ a { color: inherit; text-decoration: none; }
   border: 3px solid var(--gold);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.4rem; font-weight: 900;
-  color: var(--gold);
   background: var(--denim);
   flex-shrink: 0;
+  overflow: hidden; padding: 7px;
 }
+
+.site-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
 
 .site-title-block { text-align: center; flex: 1; }
 
@@ -583,6 +583,31 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 
 .btn-style:hover { background: var(--red-lt); }
 
+.zoe-segue {
+  position: relative; z-index: 1;
+  width: 100%;
+  background: rgba(12,26,42,0.72);
+  padding: 12px 16px;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
+  border-top: 1px solid rgba(192,57,43,0.4);
+}
+
+.zoe-segue-text {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.82rem; font-style: italic;
+  color: rgba(255,255,255,0.72); text-align: right; line-height: 1.4;
+}
+
+.btn-zoe {
+  display: inline-block;
+  background: var(--red); color: #fff;
+  font-family: 'Oswald', sans-serif; font-size: 0.72rem;
+  font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 9px 18px; transition: background 0.2s; text-align: center;
+}
+
+.btn-zoe:hover { background: var(--red-lt); }
+
 .style-hero-photo {
   background: linear-gradient(170deg, #a8cce0 0%, #b8c8dc 30%, #cdb8d0 65%, #e0a8be 100%);
   display: flex; flex-direction: column;
@@ -702,7 +727,18 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 .profile-card h3 {
   font-family: 'Playfair Display', serif;
   font-size: 1.15rem; font-weight: 700;
-  color: var(--cream); line-height: 1.25; margin-bottom: 8px;
+  color: #fff; line-height: 1.25; margin-bottom: 8px;
+}
+
+.profile-card h3 a {
+  color: #fff; text-decoration: none;
+  transition: color 0.2s, text-shadow 0.2s;
+}
+
+.profile-card h3 a:hover {
+  color: rgba(233,30,140,0.69);
+  text-shadow: 0 0 14px rgba(233,30,140,0.35);
+  text-decoration: none;
 }
 
 .profile-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.6; }
@@ -851,6 +887,18 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 .contact-note a { color: var(--gold); }
 .contact-note a:hover { text-decoration: underline; }
 
+/* ── BACK TO TOP ──────────────────────────────────────────── */
+.back-top {
+  display: block; text-align: center;
+  padding: 9px 24px;
+  font-family: 'Oswald', sans-serif; font-size: 0.65rem;
+  font-weight: 500; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--gold); text-decoration: none;
+  background: var(--navy); border-top: 1px solid var(--border);
+  transition: background 0.2s, color 0.2s;
+}
+.back-top:hover { color: #fff; background: var(--denim); }
+
 /* ── FOOTER ───────────────────────────────────────────────── */
 footer {
   background: #080e18; color: rgba(255,255,255,0.55);
@@ -917,6 +965,7 @@ footer {
   .hero-sidebar { padding: 28px 24px; }
   .hero-headline { font-size: 2.8rem; }
   .style-hero-card { grid-template-columns: 1fr; }
+  .style-hero-photo { min-height: 480px; }
   .style-sub-grid { grid-template-columns: 1fr; }
   .gm-quotes { grid-template-columns: 1fr; }
   .profile-grid { grid-template-columns: 1fr; }
@@ -942,7 +991,7 @@ footer {
     <span>wittshirt.com · Where Great Minds Move</span>
   </div>
   <div class="masthead-main">
-    <div class="site-badge">W</div>
+    <div class="site-badge"><img src="Chess_Matters_reversed_white.svg" alt="Chess Matters"></div>
     <div class="site-title-block">
       <div class="site-eyebrow">The Official Blog of Wit-T-Shirt · Est. 2012</div>
       <div class="site-name">Wit-T <span>Blog</span></div>
@@ -982,12 +1031,15 @@ footer {
     </div>
     <div class="hero-sidebar">
 
-      <!-- World Chess news callout -->
+      <!-- Florida State Championship callout -->
+      <a href="https://www.spacecoastchessfoundation.org/event/floridastatechampionship" target="_blank" rel="noopener" style="display:block; text-decoration:none;">
       <div class="wc-box">
-        <div class="wc-label">World Championship · 2024</div>
-        <div class="wc-headline">Gukesh Crowns Himself at 18!</div>
-        <div class="wc-sub">The youngest world champion in history dethrones Ding Liren in a match for the ages. A new era begins.</div>
+        <div class="wc-label">2026 Harvey Lerman Florida State Championship</div>
+        <div class="wc-headline">$16,000 Prize Fund — Fully Guaranteed!</div>
+        <div class="wc-sub">An event created by chess players for chess players! · Dates: September 5–7, 2026 · A US Chess Heritage Event!</div>
+        <div style="margin-top:10px; font-family:'Oswald',sans-serif; font-size:0.68rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--gold);">View Event →</div>
       </div>
+      </a>
 
       <div class="sidebar-story">
         <div class="cat">Tournaments · Florida</div>
@@ -1009,6 +1061,7 @@ footer {
 
     </div>
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 
@@ -1058,12 +1111,19 @@ footer {
 
       <div class="mini-card">
         <div class="cat">Instruction · Florida</div>
-        <h4>Alton Academy 4Chess: Building Florida Chess from the Ground Up</h4>
-        <p>Instructor, organizer, tournament builder — bringing chess education to players at every level. <a href="https://www.alton4chess.com/" target="_blank" rel="noopener" style="color:var(--gold);">alton4chess.com →</a></p>
+        <h4>Alton Academy 4 Chess</h4>
+        <p>A family-run chess organization serving the Tampa Bay area with clubs, lessons, classes, camps, and tournaments. <a href="https://www.alton4chess.com/" target="_blank" rel="noopener" style="color:var(--gold);">alton4chess.com →</a></p>
+      </div>
+
+      <div class="mini-card">
+        <div class="cat">Instruction · Florida</div>
+        <h4>Zoe Zelner — Chess Lessons</h4>
+        <p>Chess lessons open to all ages and players, from beginners to scholastic and intermediate-level players in competitive chess. <a href="mailto:zoezelner@gmail.com" style="color:var(--gold);">zoezelner@gmail.com →</a></p>
       </div>
 
     </div>
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 <!-- ══ TOURNAMENTS ════════════════════════════════════════════════════════ -->
@@ -1124,10 +1184,34 @@ footer {
 
       <div class="org-card">
         <div class="org-type">♟ Instruction &amp; Tournaments · Florida</div>
-        <h3>Alton Academy 4Chess</h3>
-        <p>Florida chess instructor and community builder Alton Harmon — chess coaching, tournament organization, and content bringing chess education to players at every level across the region.</p>
+        <h3>Alton Academy 4 Chess</h3>
+        <p>Alton Academy 4 Chess is a family-run chess organization serving the Tampa Bay area with clubs, lessons, classes, camps, and tournaments designed to make chess fun, welcoming, and educational. Their mission centers on helping students grow through chess — building confidence, focus, sportsmanship, leadership, and a lifelong love for the game.</p>
         <a class="org-link" href="https://www.alton4chess.com/" target="_blank" rel="noopener">Visit Alton Academy →</a>
         <div class="credit-note">Source &amp; credit: alton4chess.com</div>
+      </div>
+
+      <div class="org-card">
+        <div class="org-type">♟ Statewide · Scholastic &amp; Club</div>
+        <h3>ORCA Chess</h3>
+        <p>A Florida-based chess organization providing tournaments, clubs, and scholastic chess programs. Connecting players of all levels with competitive play and community across the state.</p>
+        <a class="org-link" href="https://www.orcachess.com/" target="_blank" rel="noopener">Visit ORCA Chess →</a>
+        <div class="credit-note">Source &amp; credit: orcachess.com</div>
+      </div>
+
+      <div class="org-card">
+        <div class="org-type">♟ Brevard County · Club &amp; Events</div>
+        <h3>Brevard Chess Club</h3>
+        <p>Serving the Brevard County chess community with regular club play, rated tournaments, and events for players of all levels across Florida's Space Coast.</p>
+        <a class="org-link" href="https://www.brevardchess.org" target="_blank" rel="noopener">Visit Brevard Chess Club →</a>
+        <div class="credit-note">Source &amp; credit: brevardchess.org</div>
+      </div>
+
+      <div class="org-card">
+        <div class="org-type">♟ Central Florida · Club &amp; Tournaments</div>
+        <h3>Central Florida Chess Club</h3>
+        <p>Club play, rated tournaments, and chess community for players throughout the Central Florida region — open to all skill levels from beginners to advanced competitors.</p>
+        <a class="org-link" href="https://www.centralflchess.org" target="_blank" rel="noopener">Visit Central Florida Chess Club →</a>
+        <div class="credit-note">Source &amp; credit: centralflchess.org</div>
       </div>
 
     </div><!-- /org-grid -->
@@ -1137,6 +1221,7 @@ footer {
       All credit belongs to the organizations listed above.
     </p>
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 <!-- ══ STYLE (Female Chess Style) ════════════════════════════════════════ -->
@@ -1172,6 +1257,10 @@ footer {
           <div class="style-portrait-name" style="margin-top:0;">Zoe Zelner</div>
           <div class="style-portrait-title">Florida Girls State Champion</div>
           <div class="style-portrait-title">· FIDE 1902</div>
+        </div>
+        <div class="zoe-segue">
+          <span class="zoe-segue-text">Ms. Zoe Zelner is her own style.</span>
+          <a class="btn-zoe" href="posts/zoe-zelner.html">Read Her Story →</a>
         </div>
       </div>
     </div>
@@ -1228,6 +1317,7 @@ footer {
     </div>
 
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 <!-- ══ PROFILES ════════════════════════════════════════════════════════════ -->
@@ -1239,7 +1329,7 @@ footer {
       <div class="profile-card">
         <span class="piece">♟</span>
         <div class="cat">Founder · Hillsborough County, FL</div>
-        <h3>Ms. Rose — Where It All Began</h3>
+        <h3><a href="posts/14-years.html">Ms. Rose — Where It All Began</a></h3>
         <p>As a teacher in Florida, Ms. Rose built a chess program with as many as 50 students learning the game — and 57 more waiting to join. She organized and hosted the first Title One chess tournament in Hillsborough County, FL. The shirts she made for her club became the foundation of Wit-T-Shirt.</p>
         <a class="profile-link" href="posts/14-years.html">Read the full story →</a>
       </div>
@@ -1247,21 +1337,22 @@ footer {
       <div class="profile-card">
         <span class="piece">♜</span>
         <div class="cat">Brand Story · 14 Years</div>
-        <h3>Not From a Business Plan — From a Chess Club</h3>
+        <h3><a href="posts/14-years.html">Not From a Business Plan — From a Chess Club</a></h3>
         <p>It started with a chess club, a teacher, and 50 kids who loved the game. That decision — to open up what was working inside one classroom to the wider chess community — is how Wit-T-Shirt was born. Original art. Real people. No AI.</p>
         <a class="profile-link" href="posts/14-years.html">Read the full story →</a>
       </div>
 
       <div class="profile-card">
         <span class="piece">♛</span>
-        <div class="cat">Instruction &amp; Community · Florida</div>
-        <h3>Alton Harmon: Building Florida Chess from the Ground Up</h3>
-        <p>Instructor, organizer, and content creator — bringing chess education to players at every level across Florida and beyond. Coaching, tournament organization, and video content that keeps the community growing.</p>
-        <a class="profile-link" href="https://www.alton4chess.com/" target="_blank" rel="noopener">Visit Alton Academy →</a>
+        <div class="cat">Style &amp; Identity · Female Chess</div>
+        <h3><a href="posts/girls-chess-style.html">Why Girls Who Play Chess Deserve Their Own Style</a></h3>
+        <p>At Wit-T-Shirt, we believed chess apparel should reflect the full spirit of the chess community — including women and girls who love the game. Not just unisex designs in smaller sizes. Something made for them, their confidence, and their love of chess.</p>
+        <a class="profile-link" href="posts/girls-chess-style.html">Read the full story →</a>
       </div>
 
     </div>
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 <!-- ══ COMMUNITY ══════════════════════════════════════════════════════════ -->
@@ -1336,6 +1427,7 @@ footer {
       </div>
     </div>
   </div>
+  <a href="#" class="back-top">↑ Back to Top</a>
 </section>
 
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->

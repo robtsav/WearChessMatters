@@ -107,10 +107,14 @@ if "!PICK!"=="2" set "ARGS=--prod" & set "WHAT=Production"
 
 echo   %WHAT% deploy starting. First run may fetch the CLI; please wait.
 echo.
-REM Run from a scratch folder, NOT from %STAGE%. The CLI writes its resolved
-REM config to .netlify\netlify.toml in the working directory; if that happens to
-REM be the folder being uploaded, the file is published with the site (and it
-REM embeds the absolute local publish path).
+REM Run from a scratch folder, NOT from %STAGE%.
+REM
+REM The CLI adds a netlify.toml to every deploy no matter what -- that is why
+REM Netlify reports one more file than this script stages. It is never served
+REM (404), so it is harmless, BUT it records the working directory as its
+REM `publish` path. Running from a throwaway TEMP folder means that path is a
+REM temp folder; running from inside %STAGE% would additionally drop a second
+REM copy into the upload itself.
 set "WORK=%TEMP%\wittblog-cli"
 if exist "%WORK%" rmdir /s /q "%WORK%"
 mkdir "%WORK%" 2>nul
@@ -137,7 +141,7 @@ if not "!RC!"=="0" (
 
 if "!PICK!"=="2" (
   echo   Verifying...
-  curl -s -o nul -w "   %SITE_URL%/ returned HTTP %%{http_code}%%" "%SITE_URL%/"
+  curl -s -o nul -w "   %SITE_URL%/ returned HTTP %%{http_code}" "%SITE_URL%/"
   echo.
 )
 

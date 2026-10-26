@@ -1,0 +1,18 @@
+# Normalise line endings so text files are stored LF in the repo and checked
+# out native. Without this, editing on Windows flips CRLF/LF and a later diff
+# shows whole files as changed when nothing meaningful did.
+* text=auto
+
+# Binary assets — never touch these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.avif binary
+*.ico binary
+*.mp4 binary
+*.woff binary
+*.woff2 binary
+*.xlsx binary
+*.pdf binary

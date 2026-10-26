@@ -47,11 +47,11 @@ body {
 a { color: inherit; text-decoration: none; }
 
 /* ── MASTHEAD ─────────────────────────────────────────────── */
-.masthead { background: var(--navy); border-bottom: 3px solid var(--gold); }
+.masthead { background: var(--navy); border-bottom: 3px solid #ffffff; }
 
 .masthead-top {
-  background: var(--gold);
-  color: var(--navy);
+  background: #C8102E;
+  color: #ffffff;
   font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
@@ -63,7 +63,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
 }
 
-.masthead-top a { color: var(--navy); }
+.masthead-top a { color: #ffffff; }
 .masthead-top a:hover { text-decoration: underline; }
 
 .masthead-main {
@@ -77,16 +77,14 @@ a { color: inherit; text-decoration: none; }
 }
 
 .site-badge {
-  width: 64px; height: 64px;
-  border: 3px solid var(--gold);
-  border-radius: 50%;
+  height: 100px;
+  width: auto;
   display: flex; align-items: center; justify-content: center;
-  background: var(--denim);
   flex-shrink: 0;
-  overflow: hidden; padding: 7px;
 }
 
-.site-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.site-badge picture { display: block; height: 100px; }
+.site-badge img { height: 100px; width: auto; object-fit: contain; display: block; }
 
 .site-title-block { text-align: center; flex: 1; }
 
@@ -146,6 +144,9 @@ nav ul li a:hover, nav ul li a.active {
 nav ul li a.style-link { color: #dbb8c8; }
 nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 
+nav ul li a.store-link { color: #ffffff; }
+nav ul li a.store-link:hover { color: #00e5ff; border-bottom-color: #00e5ff; }
+
 /* ── HERO ─────────────────────────────────────────────────── */
 .hero {
   position: relative;
@@ -155,10 +156,13 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 }
 
 .hero::before {
-  content: '♚';
-  position: absolute; right: -20px; top: -30px;
-  font-size: 26rem; color: rgba(201,168,76,0.05);
-  line-height: 1; pointer-events: none; user-select: none;
+  content: '';
+  position: absolute; right: -40px; top: 50%;
+  transform: translateY(-50%);
+  width: 420px; height: 420px;
+  background: url('Chess_Matters_reversed_white.svg') center/contain no-repeat;
+  opacity: 0.06;
+  pointer-events: none; user-select: none;
 }
 
 .hero-inner {
@@ -258,6 +262,39 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 }
 
 .sidebar-story p { font-size: 0.8rem; color: var(--gray); line-height: 1.5; }
+
+.sidebar-story--link {
+  display: block; text-decoration: none; cursor: pointer;
+  transition: border-color 0.2s;
+}
+.sidebar-story--link:hover { border-color: var(--gold); }
+.sidebar-story--link:hover h4 { color: var(--gold); }
+
+/* ── SPONSOR BOX ──────────────────────────────────────────── */
+.sponsor-box {
+  display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+  margin-top: 18px; padding: 16px;
+  background: #111; border: 1px solid var(--border);
+  border-radius: 6px; text-decoration: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+.sponsor-box:hover { border-color: var(--gold); background: #161616; }
+.sponsor-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--cream); margin-bottom: 4px; line-height: 1.2;
+}
+.sponsor-logo {
+  width: 80%; max-width: 80%; height: auto;
+  object-fit: contain; border-radius: 4px; display: block;
+}
+.sponsor-text { width: 100%; }
+.sponsor-sub {
+  font-family: 'Oswald', sans-serif; font-size: 0.6rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.sponsor-box p { font-size: 0.78rem; color: var(--gray); line-height: 1.5; margin: 0; }
 
 /* ── TICKER ───────────────────────────────────────────────── */
 .ticker {
@@ -583,19 +620,32 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 
 .btn-style:hover { background: var(--red-lt); }
 
-.zoe-segue {
+/* Zoe overlay — side-by-side layout */
+.zoe-overlay-row {
   position: relative; z-index: 1;
-  width: 100%;
-  background: rgba(12,26,42,0.72);
-  padding: 12px 16px;
+  margin-top: auto; width: 100%;
+  display: flex; flex-direction: row; align-items: center;
+  background: rgba(12,26,42,0.88);
+  border-top: 1px solid rgba(200,16,46,0.5);
+}
+
+.zoe-overlay-left {
+  flex: 1;
+  padding: 14px 16px;
+  text-align: left;
+  border-right: 1px solid rgba(200,16,46,0.3);
+}
+
+.zoe-overlay-right {
+  flex: 1;
+  padding: 14px 16px;
   display: flex; flex-direction: column; align-items: flex-end; gap: 8px;
-  border-top: 1px solid rgba(192,57,43,0.4);
 }
 
 .zoe-segue-text {
   font-family: 'Playfair Display', serif;
   font-size: 0.82rem; font-style: italic;
-  color: rgba(255,255,255,0.72); text-align: right; line-height: 1.4;
+  color: rgba(255,255,255,0.75); text-align: right; line-height: 1.4;
 }
 
 .btn-zoe {
@@ -633,7 +683,7 @@ nav ul li a.style-link:hover { color: #f0dce6; border-bottom-color: #dbb8c8; }
 .style-portrait-name {
   font-family: 'Playfair Display', serif;
   font-size: 1.5rem; font-weight: 900;
-  color: var(--red); text-align: center; margin-top: 16px; line-height: 1.2;
+  color: #C8102E; text-align: center; margin-top: 16px; line-height: 1.2;
 }
 
 .style-portrait-sub {
@@ -991,7 +1041,13 @@ footer {
     <span>wittshirt.com · Where Great Minds Move</span>
   </div>
   <div class="masthead-main">
-    <div class="site-badge"><img src="Chess_Matters_reversed_white.svg" alt="Chess Matters"></div>
+    <div class="site-badge">
+      <picture>
+        <!-- tablets & desktop: full stars-and-stripes label; phones: seal only -->
+        <source media="(min-width: 641px)" srcset="Wit-T%20Label.png">
+        <img src="wit-t-seal.png" alt="Wit-T Seal">
+      </picture>
+    </div>
     <div class="site-title-block">
       <div class="site-eyebrow">The Official Blog of Wit-T-Shirt · Est. 2012</div>
       <div class="site-name">Wit-T <span>Blog</span></div>
@@ -1014,6 +1070,7 @@ footer {
     <li><a href="#profiles">Profiles</a></li>
     <li><a href="#community">Community</a></li>
     <li><a href="#subscribe">Subscribe</a></li>
+    <li><a href="https://wittshirt.com/" target="_blank" rel="noopener" class="store-link">Wit-T-Store</a></li>
   </ul>
 </nav>
 
@@ -1053,11 +1110,11 @@ footer {
         <p>"She feels seen. She feels included. She feels like chess belongs to her too." — The full WitT story inside.</p>
       </div>
 
-      <div class="sidebar-story">
-        <div class="cat">Women's Chess · 2025</div>
-        <h4>U.S. Women Sweep the Podium</h4>
-        <p>American Continental Championship recap — an historic sweep for U.S. women's chess.</p>
-      </div>
+      <a href="https://chess4less.com" target="_blank" rel="noopener" class="sidebar-story sidebar-story--link">
+        <div class="cat">4 All Your Chess Needs · 2026</div>
+        <h4>Chess4Less.com ↗</h4>
+        <p>Serving the chess community for over 20 years. We pride ourselves on stocking a full range of products for chess-players... &amp; always happy to advise you on the products that will best suit your needs.</p>
+      </a>
 
     </div>
   </div>
@@ -1111,14 +1168,14 @@ footer {
 
       <div class="mini-card">
         <div class="cat">Instruction · Florida</div>
-        <h4>Alton Academy 4 Chess</h4>
-        <p>A family-run chess organization serving the Tampa Bay area with clubs, lessons, classes, camps, and tournaments. <a href="https://www.alton4chess.com/" target="_blank" rel="noopener" style="color:var(--gold);">alton4chess.com →</a></p>
+        <h4>Zoe Zelner — Chess Lessons</h4>
+        <p>Chess lessons open to all ages and players, from beginners to scholastic and intermediate-level players in competitive chess. <a href="mailto:zoezelner@gmail.com" style="color:var(--gold);">zoezelner@gmail.com →</a></p>
       </div>
 
       <div class="mini-card">
         <div class="cat">Instruction · Florida</div>
-        <h4>Zoe Zelner — Chess Lessons</h4>
-        <p>Chess lessons open to all ages and players, from beginners to scholastic and intermediate-level players in competitive chess. <a href="mailto:zoezelner@gmail.com" style="color:var(--gold);">zoezelner@gmail.com →</a></p>
+        <h4>Alton Academy 4 Chess</h4>
+        <p>A family-run chess organization serving the Tampa Bay area with clubs, lessons, classes, camps, and tournaments. <a href="https://www.alton4chess.com/" target="_blank" rel="noopener" style="color:var(--gold);">alton4chess.com →</a></p>
       </div>
 
     </div>
@@ -1253,14 +1310,16 @@ footer {
         <img src="https://images.squarespace-cdn.com/content/v1/54fe2721e4b03e430c530d7d/81eb5a31-57d7-4475-bf02-e63caaef1f58/Chess+Player+and+Coach+Zoe+Zelner+.jpg?format=300w"
              alt="Zoe Zelner — Florida Girls State Champion"
              style="width:100%; height:100%; object-fit:cover; object-position:top center; position:absolute; top:0; left:0; display:block;" />
-        <div style="position:relative; z-index:1; margin-top:auto; width:100%; background:rgba(26,46,68,0.82); padding:14px 16px; text-align:center;">
-          <div class="style-portrait-name" style="margin-top:0;">Zoe Zelner</div>
-          <div class="style-portrait-title">Florida Girls State Champion</div>
-          <div class="style-portrait-title">· FIDE 1902</div>
-        </div>
-        <div class="zoe-segue">
-          <span class="zoe-segue-text">Ms. Zoe Zelner is her own style.</span>
-          <a class="btn-zoe" href="posts/zoe-zelner.html">Read Her Story →</a>
+        <div class="zoe-overlay-row">
+          <div class="zoe-overlay-left">
+            <div class="style-portrait-name" style="margin-top:0;">Zoe Zelner</div>
+            <div class="style-portrait-title">Florida Girls State Champion</div>
+            <div class="style-portrait-title">· FIDE 1902</div>
+          </div>
+          <div class="zoe-overlay-right">
+            <span class="zoe-segue-text">Ms. Zoe Zelner is her own style.</span>
+            <a class="btn-zoe" href="posts/zoe-zelner.html">Read Her Story →</a>
+          </div>
         </div>
       </div>
     </div>
@@ -1424,6 +1483,15 @@ footer {
             Plant City, FL 33566
           </div>
         </div>
+
+        <a href="https://chess4less.com" target="_blank" rel="noopener" class="sponsor-box">
+          <img src="images/c4l_logo.avif" alt="Chess4Less.com logo" class="sponsor-logo" />
+          <div class="sponsor-text">
+            <div class="sponsor-name">Chess4Less.com ↗</div>
+            <div class="sponsor-sub">4 All Your Chess Needs · 2026</div>
+            <p>Serving the chess community for over 20 years. We pride ourselves on stocking a full range of products for chess-players... &amp; always happy to advise you on the products that will best suit your needs.</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
@@ -1446,6 +1514,7 @@ footer {
       <a href="#profiles">Profiles</a>
       <a href="#community">Community</a>
       <a href="#subscribe">Subscribe</a>
+      <a href="https://wittshirt.com/" target="_blank" rel="noopener" style="color:#ffffff;">Wit-T-Store</a>
     </div>
 
     <div class="footer-links">

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Zoe Zelner: Florida's Quietly Ruthless Chess Competitor — WitT Blog</title>
+    <title>Zoe Zelner: Florida's Quietly Ruthless Chess Competitor — Wit-T Blog</title>
     <meta name="description" content="Florida Girls State Champion, coach, and competitor. Zoe Zelner's chess story is built on work — not noise." />
     <link rel="canonical" href="https://robtsav.github.io/WearChessMatters/posts/zoe-zelner.html" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -41,13 +41,13 @@
         /* ── MASTHEAD ── */
         .masthead {
             background: var(--navy);
-            border-bottom: 3px solid var(--gold);
+            border-bottom: 3px solid #ffffff;
             padding: 0;
         }
 
         .masthead-top {
-            background: var(--gold);
-            color: var(--navy);
+            background: #C8102E;
+            color: #fff;
             font-family: 'Oswald', sans-serif;
             font-size: 0.7rem; font-weight: 600;
             letter-spacing: 0.12em; text-transform: uppercase;
@@ -55,42 +55,57 @@
             display: flex; justify-content: space-between; align-items: center;
         }
 
-        .masthead-top a { color: var(--navy); }
+        .masthead-top a { color: #fff; }
         .masthead-top a:hover { text-decoration: underline; }
 
         .masthead-main {
             max-width: 1100px; margin: 0 auto;
-            padding: 18px 24px 14px;
+            padding: 20px 24px 16px;
             display: flex; align-items: center;
             justify-content: space-between; gap: 16px;
         }
 
         .site-badge {
-            width: 56px; height: 56px;
+            width: 64px; height: 64px;
             border: 3px solid var(--gold); border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem; font-weight: 900;
-            color: var(--gold); background: var(--denim); flex-shrink: 0;
+            background: var(--denim); flex-shrink: 0;
+            overflow: hidden; padding: 7px;
+        }
+
+        .site-badge img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+        .site-title-block { text-align: center; flex: 1; }
+
+        .site-eyebrow {
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.68rem; letter-spacing: 0.25em;
+            color: var(--gold); text-transform: uppercase; margin-bottom: 4px;
         }
 
         .site-name {
             font-family: 'Oswald', sans-serif;
-            font-size: 1.8rem; font-weight: 700;
+            font-size: 3rem; font-weight: 700;
             letter-spacing: 0.04em; color: var(--cream);
-            text-transform: uppercase;
+            line-height: 1; text-transform: uppercase;
         }
 
         .site-name span { color: var(--gold); }
 
-        .masthead-right {
-            font-family: 'Oswald', sans-serif;
-            font-size: 0.7rem; color: var(--gray);
-            letter-spacing: 0.1em; text-align: right;
+        .site-tagline {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 0.75rem; letter-spacing: 0.18em;
+            color: var(--gray); text-transform: uppercase; margin-top: 5px;
         }
 
-        .masthead-right a { color: var(--gold); }
-        .masthead-right a:hover { text-decoration: underline; }
+        .issue-block {
+            text-align: right;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.7rem; color: var(--gray);
+            letter-spacing: 0.06em; line-height: 1.7;
+        }
+
+        .issue-block strong { color: var(--gold-lt); display: block; }
 
         /* ── BACK BAR ── */
         .back-bar {
@@ -138,7 +153,7 @@
             color: var(--cream); margin-bottom: 16px;
         }
 
-        .post-title em { color: var(--gold-lt); font-style: italic; }
+        .post-title em { color: rgba(233,30,140,0.86); font-style: italic; }
 
         .post-subtitle {
             font-family: 'Source Sans 3', sans-serif;
@@ -332,6 +347,24 @@
             .footer-bottom { flex-direction: column; gap: 4px; }
             .masthead-main { gap: 10px; }
         }
+
+        /* ── BACK TO TOP ── */
+        .back-top {
+            display: block;
+            text-align: center;
+            padding: 9px 24px;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: var(--gold);
+            text-decoration: none;
+            background: var(--navy);
+            border-top: 1px solid var(--border);
+            transition: background 0.2s, color 0.2s;
+        }
+        .back-top:hover { color: #fff; background: var(--denim); }
     </style>
 </head>
 <body>
@@ -339,14 +372,20 @@
 <!-- MASTHEAD -->
 <header class="masthead">
     <div class="masthead-top">
-        <span>WitT Blog · Chess Matters · Florida Chess · Style · Community</span>
-        <span><a href="https://wittshirt.com" target="_blank" rel="noopener">wittshirt.com</a></span>
+        <span>Wit-T Blog · wear Chess Matters · Florida Chess · Style · Community</span>
+        <span>wittshirt.com · Where Great Minds Move</span>
     </div>
     <div class="masthead-main">
-        <div class="site-badge">W</div>
-        <div class="site-name">WitT <span>Blog</span></div>
-        <div class="masthead-right">
-            <a href="https://wittshirt.com" target="_blank" rel="noopener">Shop Chess Apparel →</a>
+        <a href="../index.html" class="site-badge"><img src="../Chess_Matters_reversed_white.svg" alt="Chess Matters"></a>
+        <div class="site-title-block">
+            <div class="site-eyebrow">The Official Blog of Wit-T-Shirt · Est. 2012</div>
+            <div class="site-name">Wit-T <span>Blog</span></div>
+            <div class="site-tagline">wear Chess Matters · Florida Chess · Style · Community</div>
+        </div>
+        <div class="issue-block">
+            <strong>Summer 2026</strong>
+            Florida Chess<br>Profiles &amp; Style<br>
+            <a href="https://wittshirt.com" target="_blank" rel="noopener" style="color:var(--gold);">wittshirt.com</a>
         </div>
     </div>
 </header>
@@ -364,7 +403,7 @@
         <span class="post-tag">♛ Florida Profile · Female Chess · Style &amp; Competition</span>
         <h1 class="post-title">Zoe Zelner:<br><em>Florida's Quietly Ruthless Chess Competitor</em></h1>
         <p class="post-subtitle">Some chess players announce themselves loudly. Others just sit down, shake hands, and start taking squares away from you.</p>
-        <div class="post-meta">WitT Blog · Florida Chess Profiles · 2026</div>
+        <div class="post-meta">Wit-T Blog · Florida Chess Profiles · 2026</div>
     </div>
 </div>
 
@@ -376,6 +415,8 @@
     <p>A Florida chess player, coach, and former Florida Girls State Champion, Zelner has built a public chess identity around competition, teaching, and steady board presence. She is not packaged like a celebrity player shouting over blitz clips. Her public footprint is simpler: tournaments, coaching pages, ratings, scholastic chess, and a trail of serious games. That may be exactly why she stands out.</p>
 
     <p>She is ruthless in the chess sense — not noisy, not performative, but positional. The kind of player who understands that pressure does not need a speech. It needs a square, a file, a diagonal, a clock advantage, and one opponent who suddenly realizes the comfortable move is gone.</p>
+
+    <a href="#" class="back-top">↑ Back to Top</a>
 
     <hr class="post-rule" />
 
@@ -412,6 +453,8 @@
 
     <p>The Haring is not just another weekend event; it is designed specifically for girls state champions, giving each state affiliate's nominee a national stage. Zelner was Florida's nominee. That says something about how the state's chess community sees her.</p>
 
+    <a href="#" class="back-top">↑ Back to Top</a>
+
     <hr class="post-rule" />
 
     <span class="piece-accent">♛ ♟ ♛</span>
@@ -429,6 +472,8 @@
     <p>For many young female players, chess can still feel like walking into someone else's room. The boards are open to everyone, but the culture has not always felt that way. Seeing a Florida woman compete, represent the state, coach students, and stay active in the chess community sends a different message: <em>this room is yours too.</em></p>
 
     <p>US Chess's Women in Chess initiative says chess builds focus, critical thinking, self-confidence, and the habit of hard work for girls and women — the same benefits boys and men are expected to claim from the game. Zelner's public role fits that mission at a local level. She is not just proof that women can play; she is proof that women can compete, teach, mentor, travel, and shape the next group of players.</p>
+
+    <a href="#" class="back-top">↑ Back to Top</a>
 
     <hr class="post-rule" />
 
@@ -448,13 +493,15 @@
     </div>
 
     <div class="post-signature">
-        WitT Blog · Florida Chess Profiles<br />
+        Wit-T Blog · Florida Chess Profiles<br />
         <a href="../index.html#style">← Return to Style Section</a> &nbsp;·&nbsp;
         <a href="https://wittshirt.com" target="_blank" rel="noopener">Shop Chess Apparel at wittshirt.com</a><br />
         Wear Chess Matters. Where Great Minds Move.
     </div>
 
 </article>
+
+<a href="#" class="back-top">↑ Back to Top</a>
 
 <!-- FOOTER -->
 <footer>
@@ -491,7 +538,7 @@
     </div>
 
     <div class="footer-bottom">
-        <span>© 2026 Wit-T-Shirt / WitT Blog · All rights reserved · Plant City, FL</span>
+        <span>© 2026 Wit-T-Shirt / Wit-T Blog · All rights reserved · Plant City, FL</span>
         <span>Original chess apparel · No AI art · 14 years promoting Florida chess</span>
     </div>
 </footer>
